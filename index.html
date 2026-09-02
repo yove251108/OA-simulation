@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>学生请假申请表</title>
+    <link rel="icon" type="image/png" href="LOGO.png" />
+    <link rel="apple-touch-icon" href="LOGO.png" />
+    <meta property="og:image" content="LOGO.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="phone-frame">
+      <header class="appbar">
+        <button class="icon-btn" id="backBtn" aria-label="返回">
+          <svg class="back-svg" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+            <line x1="16" y1="10" x2="6" y2="10" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+            <polyline points="10,6 6,10 10,14" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <div class="app-title"><span class="marquee-text" data-editable>学生请假（新）-XXX-XXXX-XX-XX XX:XX:XX</span></div>
+        <div class="app-actions">
+          <button class="icon-btn" id="editTitleBtn">⋯</button>
+        </div>
+      </header>
+
+      <div class="subbar">
+        <div class="shadow-rect" aria-hidden="true"><span class="ticket-label" data-editable>工单号：</span></div>
+        <div class="form-id" data-editable>学生请假申请表</div>
+        <div class="form-meta"></div>
+      </div>
+
+      <main class="content">
+        <section class="section">
+          <h3 class="section-title"><span class="title-mark"></span><span data-editable>学生信息</span></h3>
+
+          <div class="grid">
+            <label class="field">
+              <span class="label" data-editable>学号：</span>
+              <input class="input" />
+            </label>
+            <label class="field">
+              <span class="label" data-editable>姓名：</span>
+              <input class="input" />
+            </label>
+            <label class="field">
+              <span class="label" data-editable>性别：</span>
+              <input class="input" />
+            </label>
+            <label class="field">
+              <span class="label" data-editable>出生年月：</span>
+              <input class="input" type="text" placeholder="YYYY-MM-DD" />
+            </label>
+            <label class="field">
+              <span class="label" data-editable>入学时间：</span>
+              <input class="input" type="text" placeholder="YYYY-MM-DD" />
+            </label>
+            <label class="field">
+              <span class="label" data-editable>班级：</span>
+              <input class="input" />
+            </label>
+            <label class="field">
+              <span class="label" data-editable>系（部）：</span>
+              <input class="input" />
+            </label>
+            <label class="field">
+              <span class="label" data-editable>专业：</span>
+              <input class="input" />
+            </label>
+            <label class="field">
+              <span class="label" data-editable>层次：</span>
+              <input class="input" />
+            </label>
+            <div><span class="label" data-editable>补充信息1</span></div>
+            <div><span class="label" data-editable>补充信息2</span></div>
+            <div><span class="label" data-editable>补充信息3</span></div>
+            <div><span class="label" data-editable>补充信息4</span></div>
+            <div><span class="label">&nbsp;</span></div>
+            <div><span class="label">&nbsp;</span></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h3 class="section-title"><span class="title-mark"></span><span data-editable>请假信息</span></h3>
+          <div class="grid">
+            <label class="field">
+              <span class="label" data-editable>请假开始时间：</span>
+              <input class="input" type="text" placeholder="YYYY-MM-DD HH-mm-ss" />
+            </label>
+            <label class="field">
+              <span class="label" data-editable>请假结束时间：</span>
+              <input class="input" type="text" placeholder="YYYY-MM-DD HH-mm-ss" />
+            </label>
+            <label class="field">
+              <span class="label" data-editable>请假天数：</span>
+              <input class="input" type="number" />
+            </label>
+            <div class="field">
+              <span class="label" data-editable>请假类型：</span>
+              <div class="radio-group">
+                <label><input type="radio" name="type" checked /> 事假</label>
+                <label><input type="radio" name="type" /> 病假</label>
+              </div>
+            </div>
+            <div><span class="label" data-editable>补充说明1</span></div>
+            <div><span class="label" data-editable>补充说明2</span></div>
+            <label class="field">
+              <span class="label" data-editable>乘坐交通工具</span>
+              <input class="input" placeholder="火车/飞机/汽车等" />
+            </label>
+            <label class="field full">
+              <span class="label" data-editable>请假事由</span>
+              <input class="input" type="text" />
+            </label>
+            <div class="label-only" aria-label="附件">附件</div>
+            <div class="attach-bar" aria-hidden="true"></div>
+          </div>
+        </section>
+
+        <section class="section">
+
+          <div class="table-wrap">
+            <table class="table" id="reviewTable">
+              <thead>
+                <tr>
+                  <th data-editable>任务<br>节点</th>
+                  <th data-editable>开始<br>时间</th>
+                  <th data-editable>结束<br>时间</th>
+                  <th data-editable>经历<br>时间</th>
+                  <th data-editable>执行<br>&nbsp;人</th>
+                  <th data-editable>审批<br>意见</th>
+                  <th data-editable>审批<br>状态</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="editable"></td>
+                  <td class="editable"></td>
+                  <td class="editable"></td>
+                  <td class="editable"></td>
+                  <td class="editable"></td>
+                  <td class="editable"></td>
+                  <td class="editable status"></td>
+                </tr>
+                <tr>
+                  <td class="editable"></td>
+                  <td class="editable"></td>
+                  <td class="editable"></td>
+                  <td class="editable"></td>
+                  <td class="editable"></td>
+                  <td class="editable"></td>
+                  <td class="editable status"></td>
+                </tr>
+                <tr>
+                  <td class="editable"></td>
+                  <td class="editable"></td>
+                  <td class="editable"></td>
+                  <td class="editable"></td>
+                  <td class="editable"></td>
+                  <td class="editable"></td>
+                  <td class="editable status"></td>
+                </tr>
+              </tbody>
+            </table>
+            
+          </div>
+        </section>
+      </main>
+
+      
+
+      <div class="edit-toggle">
+        <label>
+          <input type="checkbox" id="toggleEdit" />
+          启用编辑模式（文本皆可直接改）
+        </label>
+      </div>
+      <div class="edit-tools">
+        <button class="btn primary" id="saveImageBtn">保存图片</button>
+        <button class="btn warn" id="toggleWatermarkBtn">关闭水印</button>
+      </div>
+      <div class="watermark" aria-hidden="true"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+  </html>
